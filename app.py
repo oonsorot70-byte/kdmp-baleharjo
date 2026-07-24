@@ -72,12 +72,21 @@ def format_rupiah(val):
 # -----------------------------------------------------------------------------
 # 3. HEADER BERSAMA & NAVIGATION
 # -----------------------------------------------------------------------------
-st.markdown("""
-<div class="main-header">
-    <h1>🇮🇩 Koperasi Desa Merah Putih (KDMP) Kalurahan Baleharjo</h1>
-    <p>Sistem Informasi Keuangan Multi-Usaha Terpadu & Real-time | Gunungkidul, D.I. Yogyakarta</p>
-</div>
-""", unsafe_allow_html=True)
+col_logo, col_header = st.columns([1, 5])
+
+with col_logo:
+    try:
+        st.image("logo.png", width=140)
+    except:
+        st.write("🇮🇩 **KDMP**")
+
+with col_header:
+    st.markdown("""
+    <div class="main-header">
+        <h1>Koperasi Desa Merah Putih (KDMP) Kalurahan Baleharjo</h1>
+        <p>Sistem Informasi Keuangan Multi-Usaha Terpadu & Real-time | Gunungkidul, D.I. Yogyakarta</p>
+    </div>
+    """, unsafe_allow_html=True)
 
 # Sidebar Menu
 st.sidebar.title("📌 Navigation Menu")
