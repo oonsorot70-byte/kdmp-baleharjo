@@ -69,18 +69,16 @@ except Exception as e:
 def format_rupiah(val):
     return f"Rp {val:,.0f}".replace(",", ".")
 
-# -----------------------------------------------------------------------------
-# 3. HEADER BERSAMA & NAVIGATION
-# -----------------------------------------------------------------------------
-col_logo, col_header = st.columns([1, 5])
+# 3. HEADER BERSAMA & NAVIGASI
+logo_col, header_col = st.columns([1, 5])
 
-with col_logo:
+with logo_col:
     try:
-        st.image("logo.png", width=140)
+        st.image("logo.jpeg", width=140)
     except:
         st.write("🇮🇩 **KDMP**")
 
-with col_header:
+with header_col:
     st.markdown("""
     <div class="main-header">
         <h1>Koperasi Desa Merah Putih (KDMP) Kalurahan Baleharjo</h1>
